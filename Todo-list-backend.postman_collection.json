@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "74e77a78-83d7-4322-b7a5-7b1864b29761",
+		"name": "Practice Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23168404"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mail@gmail.com\",\r\n    \"username\": \"user0222\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}/signup",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mail@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}/login",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}{{host}}/check-auth",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"check-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"test002\",\r\n   \"description\":\"description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}/todo",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description002",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "In Process",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}/todo/63bef5ad9d9c86fdac8f973e",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"todo",
+						"63bef5ad9d9c86fdac8f973e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}{{host}}/todo/63bef5ad9d9c86fdac8f973e",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"todo",
+						"63bef5ad9d9c86fdac8f973e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"test002\",\r\n   \"description\":\"description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}/todo",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
